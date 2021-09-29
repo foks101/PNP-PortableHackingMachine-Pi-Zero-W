@@ -4,37 +4,25 @@ echo "******************* Installing XFCE4 environment *************"
 apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
 apt-get install lightdm
 dpkg-reconfigure lightdm
-echo "********************** Installing Vino ************************"
-apt-get -y install vino
-gsettings set org.gnome.Vino prompt-enabled false
-gsettings set org.gnome.Vino require-encryption false
+echo "********************** Installing VNC Server ************************"
+apt-get install tightvncserver
+echo "vncserver :1 -geometry 1280?800 -depth 16 -pixelformat rgb565"
+echo "If VNC Server dont work use xrdp"
 echo "VNC server setup done"
 
+mkdir /root/.config/
 mkdir /root/.config/autostart 
 echo "will be fixed after reboot"
 echo " "
 echo "******************* Installing Wifite*************"
 apt-get install wifite 
 echo " "
-echo "**********************Making autorun VNC script************************"
-echo "[Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Name=VINO
-Comment=
-Exec=/usr/lib/vino/vino-server
-StartupNotify=false
-Terminal=false
-Hidden=false" > /root/.config/autostart/vino.desktop
-
-echo "VNC autorun on startup done"
-
 echo "****************Enabling autologin***************"
 
-mv /etc/lightdm/lightdm.conf  /etc/lightdm/lightdm.conf.bak
-mv /etc/pam.d/lightdm-autologin  /etc/pam.d/lightdm-autologin.bak
-cp lightdm.conf /etc/lightdm/lightdm.conf
-cp lightdm-autologin /etc/pam.d/lightdm-autologin
+echo "mv /etc/lightdm/lightdm.conf  /etc/lightdm/lightdm.conf.bak"
+echo "mv /etc/pam.d/lightdm-autologin  /etc/pam.d/lightdm-autologin.bak"
+echo "cp lightdm.conf /etc/lightdm/lightdm.conf"
+echo "cp lightdm-autologin /etc/pam.d/lightdm-autologin"
 
 echo "setting up interafces file"
 
