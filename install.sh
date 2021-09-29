@@ -5,10 +5,14 @@ apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-pl
 apt-get install lightdm
 dpkg-reconfigure lightdm
 echo "********************** Installing VNC Server ************************"
-apt-get install tightvncserver
+echo "apt-get install tightvncserver"
 echo "vncserver :1 -geometry 1280?800 -depth 16 -pixelformat rgb565"
 echo "If VNC Server dont work use xrdp"
 echo "VNC server setup done"
+
+echo "********************** Installing XRDP Server ************************"
+sudo apt install freerdp2-x11
+echo "xfreerdp /f /u:USERNAME /p:PASSWD /v:IP[:PORT]"
 
 mkdir /root/.config/
 mkdir /root/.config/autostart 
