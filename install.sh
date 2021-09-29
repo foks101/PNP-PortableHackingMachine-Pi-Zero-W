@@ -14,8 +14,6 @@ echo "********************** Installing XRDP Server ************************"
 sudo apt install freerdp2-x11
 echo "xfreerdp /f /u:USERNAME /p:PASSWD /v:IP[:PORT]"
 
-mkdir /root/.config/
-mkdir /root/.config/autostart 
 echo "will be fixed after reboot"
 echo " "
 echo "******************* Installing Wifite*************"
@@ -36,11 +34,3 @@ echo "Your Current network configuration backed up as /etc/network/interfaces.ba
 cp interfaces /etc/network/interfaces
 echo "END of Script... Thanks for using it"
 echo " "
-echo "Please Subscribe: https://YouTube.com/PNPtutorials"
-
-echo "Follow us on all Social Media Websites 
-➤ GooglePlus ➤ https://www.plus.google.com/+PNPtutorials
-➤ Twitter    ➤ https://www.twitter.com/PNPtutorials
-➤ Instagram  ➤ https://www.instagram.com/PNPtutorialsOfficial
-➤ Facebook   ➤ https://www.facebook.com/PNPtutorials
-➤ Plz Donate ➤ https://www.paypal.me/PNPtutorials"
